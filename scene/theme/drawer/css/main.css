@@ -5,3 +5,9 @@ body {
 .container {
     max-width: 100%;
 }
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+    border-bottom-width: 0px;
+}
+thead tr {
+    background: #E7E7E7;
+}

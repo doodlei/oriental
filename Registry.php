@@ -5,10 +5,9 @@
  * @author Zorj
  * Oct 24, 2013 - 1:25:27 PM
  */
-
-/** Directory Separator **/
+/** Directory Separator * */
 if (!defined('DS'))
-    define ('DS', '/');
+    define('DS', '/');
 /** Absolute path to the foo_ directory. */
 if (!defined('ABSPATH'))
     define('ABSPATH', $_SERVER['DOCUMENT_ROOT']);
@@ -33,8 +32,4 @@ if (!defined('DRAWER'))
 if (!defined('SKETCH'))
     define('SKETCH', 'sketch');
 
-function __autoload($class) {
-    $path = ucfirst($class);
-    require DS . GOVERNOR . DS . $path .'.php';
-}
 ?>

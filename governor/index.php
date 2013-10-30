@@ -1,7 +1,6 @@
 <?php
 
 class Index extends Governor {
-    public $pdo = '';
     
     function __construct() {
         parent::__construct();
@@ -13,15 +12,18 @@ class Index extends Governor {
         $this->scene->render('index/index');
     }
 
-    public function login() {
+    public function users() {
         global $pdo;
-        //$sql = "SELECT * FROM users WHERE uname = 'sam'";
-        if(!$pdo) {
-            $pick = 'fuck';
+        $query = 'SELECT * FROM users';
+        try {
+            $stmt = $pdo->prepare($query);
+            $stmt->execute();
+        } catch (PDOException $ex) {
+            die("Failed to run query: " . $ex->getMessage());
         }
+        $this->scene->rows = $stmt->fetchAll();
+        $this->scene->render('index/users');
         
-        $this->scene->pick;
-        $this->scene->render('index/index');
     }
 
 }
