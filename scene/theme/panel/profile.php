@@ -1,12 +1,14 @@
 <?php
-if (isset($_SESSION['user']['id'])) {
+
+if (isset($this->row['id'])) {
     getPage('header');
     getPage('navbar');
     echo '<div class="jumbotron">';
-        echo $this->msg;
+    echo $this->row['username'];
     echo '</div>';
     getPage('footer');
 } else {
-    header("Location: http://192.168.0.25:8081/fwf/panel/login");
+    header("Location: http://192.168.0.25:8081/fwf/index/index");
 }
+
 ?>

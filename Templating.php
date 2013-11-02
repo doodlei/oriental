@@ -11,7 +11,7 @@ function getPage($name =  NULL) {
 }
 
 function basicInfo($show = '') {
-    echo get_bloginfo($show, 'display');
+    return get_bloginfo($show, 'display');
 }
 
 function get_bloginfo($show = '', $filter = 'raw') {

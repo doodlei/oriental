@@ -4,7 +4,7 @@ getPage('navbar');
 ?>
 <div class="jumbotron">
     <?php
-        echo $this->msg;
+        echo "Attempt Failed!";
     ?>
 </div>
 <?php

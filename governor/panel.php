@@ -6,4 +6,28 @@ class Panel extends Governor {
         parent::__construct();
     }
 
+    public function login() {
+        $this->scene->render('panel/login');
+    }
+
+    public function profile() {
+        global $pdo;
+        $query = "SELECT * FROM wms_users WHERE id = '".$_SESSION['user']['id']."'";
+        var_dump($query);
+        try {
+            $stmt = $pdo->prepare($query);
+            $stmt->execute();
+        } catch (PDOException $ex) {
+            die("Failed to run query: " . $ex->getMessage());
+        }
+        $this->scene->row = $row = $stmt->fetch();
+        $this->scene->render('panel/profile');
+    }
+    
+    public function logout() {
+        $this->scene->render('panel/logout');
+    }
+
 }
+
+?>

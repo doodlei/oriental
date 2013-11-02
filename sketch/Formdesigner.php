@@ -191,6 +191,30 @@ class FormDesigner {
         return $buf;
     }
 
+    /*     * * Created by Samrat Khan ** */
+
+    function zontal_input_text($name, $value = '', $type, $field_class, $field_id, $label_width_class, $field_width_class = NULL, $place_holder = NULL) {
+        $buf = '
+            <div class="form-group">
+            <label class="' . $label_width_class . ' control-label">' . $place_holder . '</label>
+            <div class="' . $field_width_class . '">
+                <input name="' . $name . '" value="' . $value . '" type="' . $type . '" class="' . $field_class . '" id="' . $field_id . '" placeholder="' . $place_holder . '">
+            </div>
+            </div>';
+        return $buf;
+    }
+
+    function zontal_submit_btn($btn_name, $btn_text, $btn_box_width, $btn_class) {
+        $buf = '
+            <div class="form-group">
+                <div class="' . $btn_box_width . '">
+                    <input name="' . $btn_name . '" type="submit" class="' . $btn_class . '" value="' . $btn_text . '">
+                </div>
+            </div>
+            ';
+        return $buf;
+    }
+
 }
 
 ?>
