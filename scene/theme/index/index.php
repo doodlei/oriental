@@ -7,6 +7,8 @@ if (isset($_SESSION['user']['id'])) {
     echo '</div>';
     getPage('footer');
 } else {
-    header("Location: http://192.168.0.25:8081/fwf/panel/login");
+    $user = new User();
+    $user->redirect_to_login();
+    //header("Location: http://192.168.0.25:8081/fwf/panel/login");
 }
 ?>

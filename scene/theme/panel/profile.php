@@ -1,6 +1,6 @@
 <?php
 
-if (isset($this->row['id'])) {
+if (isset($_SESSION['user']['id'])) {
     getPage('header');
     getPage('navbar');
     echo '<div class="jumbotron">';
@@ -8,7 +8,6 @@ if (isset($this->row['id'])) {
     echo '</div>';
     getPage('footer');
 } else {
-    header("Location: http://192.168.0.25:8081/fwf/index/index");
+    header("Location: http://192.168.0.25:8081/fwf/panel/login");
 }
-
 ?>

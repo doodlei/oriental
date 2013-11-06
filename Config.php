@@ -14,7 +14,9 @@ defined('SUB_PROGRAMMING') ? null : define('SUB_PROGRAMMING', 'Sadik Sarfaraz Zo
 defined('COPYRIGHT') ? null : define('COPYRIGHT', 'StepOne Group WMS');
 defined('RESERVEDBY') ? null : define('RESERVEDBY', 'Step One Group Ltd.');
 
-define('ROOT', 'http://192.168.0.25:8081/');
+define('ROOT', 'http://192.168.0.25:8081');
+/** Absolute path to the foo_root directory. */
+defined('APPPATH') ? null : define('APPPATH', 'fwf');
 defined('DB_SERVER') ? null : define('DB_SERVER', 'localhost');
 defined('DB_USER') ? null : define('DB_USER', 'root');
 defined('DB_PASS') ? null : define('DB_PASS', '');

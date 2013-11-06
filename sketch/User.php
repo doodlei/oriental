@@ -2,6 +2,8 @@
 
 class User {
 
+    private $session = '';
+
     function __construct() {
         session_start();
     }
@@ -34,7 +36,7 @@ class User {
             if ($login_ok) {
                 unset($row['salt']);
                 unset($row['password']);
-                $this->scene->user = $_SESSION['user'] = $row;
+                $_SESSION['user'] = $row;
                 header("Location: profile");
             } else {
                 print("Login Failed.");
@@ -43,5 +45,10 @@ class User {
         }
     }
 
+    public function redirect_to_login() {
+        header("Location: " . ROOT . DS . APPPATH . DS . 'panel' . DS . 'login');
+    }
+
 }
+
 ?>

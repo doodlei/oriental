@@ -12,10 +12,6 @@ if (!defined('DS'))
 if (!defined('ABSPATH'))
     define('ABSPATH', $_SERVER['DOCUMENT_ROOT']);
 
-/** Absolute path to the foo_root directory. */
-if (!defined('APPPATH'))
-    define('APPPATH', 'fwf');
-
 /** Absolute Application directory Defining */
 if (!defined('GOVERNOR'))
     define('GOVERNOR', 'governor');

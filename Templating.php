@@ -17,7 +17,7 @@ function basicInfo($show = '') {
 function get_bloginfo($show = '', $filter = 'raw') {
     switch ($show) {
         case 'url':
-            $output = ROOT . APPPATH;
+            $output = ROOT . DS . APPPATH ;
             break;
         case 'title':
             $output = TITLE;
@@ -41,7 +41,7 @@ function get_bloginfo($show = '', $filter = 'raw') {
             $output = RESERVEDBY;
             break;
         case 'design_drawer':
-            $output = ROOT . APPPATH . DS . SCENE . DS . THEME . DS . DRAWER;
+            $output = ROOT . DS . APPPATH . DS . SCENE . DS . DRAWER;
             break;
     }
     return $output;
