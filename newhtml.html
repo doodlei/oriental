@@ -1,0 +1,86 @@
+<style>
+    .container-short-form {
+        background: none repeat scroll 0 0 padding-box #B8680B;
+        border-radius: 5px;
+        clear: both;
+        margin: 20px 0 0;
+        padding: 6px 8px 0;
+        width: 100%;
+    }
+    .title-short-form, .title-related-topic {
+        margin: 0 0 15px;
+    }
+    .title-short-form {
+        color: #4A0701;
+        font-family: "Times New Roman",Times,serif;
+        font-size: 1.25em;
+        font-weight: normal;
+        margin-top: 0;
+    }
+    #containerIntakeFormShort, #containerIntakeFormShortAutofill {
+        color: #000000;
+        font-size: 0.8125em;
+    }
+</style>
+<div class="container-short-form">
+    <h4 class="title-short-form">Contact <span>Roberts Law Team</span></h4>
+    <div id="containerIntakeFormShortAutofill">
+        <p>
+            <strong>Bold</strong> labels are required.
+        </p>
+        <form class="formAutoFill" id="intakeFormShortAutofill" name="intakeFormShortAutofill" action="/cgi-bin/emailservice.cgi" method="post">
+            <input type="hidden" value="1384320823" name="serverTime">
+            <input type="hidden" value="1658492" name="SubscriptionID">
+            <input type="hidden" value="Roberts Law Group PLLC Email Inquiry, SiteDomain" name="email_subject">
+            <input type="hidden" value="true" name="removeFLBranding">
+            <input type="hidden" value="WuGn2jTSwSNow1tV0aR5Mab8xnrqShJ5saubCftvoXiH5RFcGMQBJvYGOqSOjzvYKGEUv202baOdKXj4ikM+1jB4pIfGdVICrDsz77yfqeFAkEw6kMndk+V9V+ci9UXZw2NtCFTplJ5iOck06the8JJPjk4fUTYp43dcZDj6hxc=" name="guid">
+            <input type="hidden" value="3833155" name="wld_id">
+            <input type="hidden" value="Thank-You" name="thankyouPage">
+            <fieldset>
+                <legend><span>Contact Information</span></legend>
+                <label for="intakeFormShortName" class="formLabelHide">Name</label>
+                <div class="formHighlight">
+                    <input type="text" title="Name" id="intakeFormShortName" name="Name|at:name||Please enter your name.">
+                </div>
+                <label for="intakeFormShortEmail" class="formLabelHide"><strong>E-mail Address</strong><img width="15" height="15" src="http://video-transcripts.findlaw.com/includes/images/formRequired.gif" alt="This field is required."></label>
+                <label class="formHide" for="intakeFormShortEmail"><strong>Please enter a valid e-mail address.</strong></label>
+                <div class="formHighlight">
+                    <input type="text" title="E-mail Address" class="validate email" id="intakeFormShortEmail" name="E-mail Address|at:email|r|Please enter a valid e-mail address." style="font-weight: bold;">
+                </div>
+                <label for="intakeFormShortPhone" class="formLabelHide">Phone</label>
+                <div class="formHighlight">
+                    <input type="text" title="Phone" id="intakeFormShortPhone" name="Phone|at:phone||Please enter a valid phone number. You may use 0-9, spaces and the ( ) - + characters.">
+                </div>
+                <label for="intakeFormShortMessage" class="formLabelHide">Brief description of your legal issue</label>
+                <div class="formHighlight">
+                    <textarea cols="15" rows="4" title="Brief description of your legal issue" id="intakeFormShortMessage" name="Brief description of your legal issue|at:message||Please describe your legal issue."></textarea>
+                </div>
+                <div class="formCheck">
+                    <label class="formHide" for="intakeFormShortDisclaimerCheck">
+                        <strong>Please verify that you have read the disclaimer.</strong>
+                    </label>
+                    <label for="intakeFormShortDisclaimerCheck">
+                        <input type="checkbox" value="yes" class="validate checkbox" id="intakeFormShortDisclaimerCheck" name="Read disclaimer:||r|Please verify that you have read the disclaimer.">
+                        <strong>I have read the <span>disclaimer.</span></strong>
+                    </label>
+                    <strong>
+                        <a href="#intakeFormShortDisclaimer" class="intakeFormShortDisclaimerLink">disclaimer</a>.</strong>
+                </div>
+                <input type="hidden" value="Read disclaimer:||r|Please verify that you have read the disclaimer." name="cgi|checkboxDisclaimerIntakeFormShort" id="checkboxDisclaimerIntakeFormShort" class="intakeFormHiddenInput">
+                <div id="intakeFormShortDisclaimer" style="display: none;">
+                    <div>
+                        <p>
+                            The use of the Internet or this form for communication with the firm or any individual member of the firm does not establish an attorney-client relationship. Confidential or time-sensitive information should not be sent through this form.
+                        </p>
+                        <a rel="nofollow" href="#intakeFormShortDisclaimerCheck">close</a>
+                    </div>
+                </div>
+            </fieldset>
+
+            <p class="intakeFormShortPrivacy">
+                <a href="/Privacy-Policy.shtml">Privacy Policy</a>
+            </p>
+            <input type="image" id="intakeFormShortAutofillSubmit" alt="Submit" class="submit over" value="Submit" name="Submit" src="http://www.robertslawteam.com/design/images/formSubmitShort.gif">
+        </form>
+    </div>
+</div>

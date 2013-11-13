@@ -4,7 +4,7 @@ if (isset($_SESSION['user']['id'])) {
     getPage('header');
     getPage('navbar');
     echo '<div class="jumbotron">';
-    echo $this->row['username'];
+        echo $this->row['username'];
     echo '</div>';
     getPage('footer');
 } else {
