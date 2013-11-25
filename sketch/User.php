@@ -7,7 +7,12 @@ class User {
     function __construct() {
         session_start();
     }
-
+    /**
+     * 
+     * @global type $pdo
+     * @param type $username
+     * @param type $password
+     */
     public function authenticate($username = "", $password = "") {
         global $pdo;
         $submitted_username = '';
@@ -44,7 +49,9 @@ class User {
             }
         }
     }
-
+    /**
+     * 
+     */
     public function redirect_to_login() {
         header("Location: " . ROOT . DS . APPPATH . DS . 'panel' . DS . 'login');
     }

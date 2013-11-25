@@ -11,16 +11,10 @@ class Panel extends Governor {
     }
 
     public function profile() {
-        global $pdo;
-        $query = "SELECT * FROM wms_users WHERE id = '".$_SESSION['user']['id']."'";
-        try {
-            $stmt = $pdo->prepare($query);
-            $stmt->execute();
-        } catch (PDOException $ex) {
-            die("Failed to run query: " . $ex->getMessage());
-        }
-        $this->scene->row = $stmt->fetch();
         $this->scene->render('panel/profile');
+    }
+    public function viewusers() {
+        $this->scene->render('panel/viewusers');
     }
     
     public function logout() {

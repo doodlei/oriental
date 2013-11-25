@@ -16,6 +16,7 @@ if (isset($_SESSION['user']['id'])) {
         $headers = array('ID', 'Name', 'Email', 'erqwer');
     
     $tbl = new Table();
+
     $tbl->setColumnsWidth(array("120px", "150px", "150px", "80px"));
     
     echo $tbl->showTable($headers, $data);

@@ -7,8 +7,8 @@ date_default_timezone_set($timezone);
 
 /* * * Database Information ** */
 defined('VERSION') ? null : define('VERSION', '6.0.1');
-defined('TITLE') ? null : define('TITLE', 'General WMS');
-defined('DESCRIPTION') ? null : define('DESCRIPTION', 'Warehouse Management System');
+defined('TITLE') ? null : define('TITLE', 'Willow');
+defined('DESCRIPTION') ? null : define('DESCRIPTION', 'Willow Framework');
 defined('CORE_PROGRAMMING') ? null : define('CORE_PROGRAMMING', 'Samrat Khan');
 defined('SUB_PROGRAMMING') ? null : define('SUB_PROGRAMMING', 'Sadik Sarfaraz Zorj');
 defined('COPYRIGHT') ? null : define('COPYRIGHT', 'StepOne Group WMS');
