@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * 
+ * @author Samrat Khan <skydotint@gmail.com>
+ * @name User.php
+ * @version 0.1
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @package User
+ * 
+ */
 class User {
 
     private $session = '';
@@ -7,6 +16,7 @@ class User {
     function __construct() {
         session_start();
     }
+
     /**
      * 
      * @global type $pdo
@@ -49,13 +59,5 @@ class User {
             }
         }
     }
-    /**
-     * 
-     */
-    public function redirect_to_login() {
-        header("Location: " . ROOT . DS . APPPATH . DS . 'panel' . DS . 'login');
-    }
 
 }
-
-?>

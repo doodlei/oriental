@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Designs the form using FormDesigner
  * call this class to your page
@@ -14,6 +15,7 @@
  * @package FormDesigner
  */
 class FormDesigner {
+
     /**
      * 
      * @param string $name Textarea Name. Use eg. name="example"
@@ -32,6 +34,7 @@ class FormDesigner {
                 . '</textarea>';
         return $buf;
     }
+
     /**
      * 
      * @param string $name Hidden field name. Use eg. name="example"
@@ -42,6 +45,7 @@ class FormDesigner {
         $buf = '<input type="hidden" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '">';
         return $buf;
     }
+
     /**
      * 
      * @global string $state
@@ -64,6 +68,7 @@ class FormDesigner {
         unset($state);
         return $buf;
     }
+
     /**
      * 
      * @param string $name
@@ -78,6 +83,7 @@ class FormDesigner {
         $buf = '<input type="checkbox" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '"' . $tmp . '>';
         return $buf;
     }
+
     /**
      * 
      * @param string $name
@@ -90,6 +96,7 @@ class FormDesigner {
         $buf = '<input type="text" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '" class="' . $class . '" id="' . $id . '">';
         return $buf;
     }
+
     /**
      * 
      * @param string $name
@@ -106,6 +113,7 @@ class FormDesigner {
         $buf = '<input type="password" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '" size="' . $size . '" maxlength="' . $maxlength . '">';
         return $buf;
     }
+
     /**
      * 
      * @param type $name
@@ -116,6 +124,7 @@ class FormDesigner {
         $buf = '<input type="submit" name="' . htmlspecialchars($name) . '" value="' . htmlspecialchars($value) . '">';
         return $buf;
     }
+
     /**
      * 
      * @param string $value
@@ -125,6 +134,7 @@ class FormDesigner {
         $buf = '<input type="reset" value="' . htmlspecialchars($value) . '">';
         return $buf;
     }
+
     /**
      * 
      * @param string $name
@@ -166,6 +176,7 @@ class FormDesigner {
         $buf .= '</select>';
         return $buf;
     }
+
     /**
      * 
      * @param type $name
@@ -208,8 +219,7 @@ class FormDesigner {
                     $buf .= '<td valign="top">' . html_input_radio($name, $key, $checked) . '&nbsp;</td><td valign="top">' . $val . '&nbsp;&nbsp;&nbsp;</td>';
 
                     error_reporting($er);
-                }
-                else
+                } else
                     $buf .= '<td colspan="2">&nbsp;</td>';
             }
             $buf .= '</tr>' . "\n";
@@ -217,6 +227,7 @@ class FormDesigner {
         $buf .= '</table>';
         return $buf;
     }
+
     /**
      * 
      * @param type $name
@@ -258,8 +269,7 @@ class FormDesigner {
                     $buf .= '<td valign="top">' . html_input_checkbox($name, $key, $checked) . '&nbsp;</td><td valign="top">' . $val . '&nbsp;&nbsp;&nbsp;</td>';
 
                     error_reporting($er);
-                }
-                else
+                } else
                     $buf .= '<td colspan="2">&nbsp;</td>';
             }
             $buf .= '</tr>' . "\n";
@@ -269,19 +279,24 @@ class FormDesigner {
     }
 
     /*     * * Created by Samrat Khan ** */
+
     /**
      * 
      * @param type $name
-     * @param type $value
      * @param type $type
      * @param type $field_class
      * @param type $field_id
      * @param type $label_width_class
      * @param type $field_width_class
+     * @param type $value
      * @param type $place_holder
      * @return string
+     * 
+     * @uses element 
+     * 
+     * 
      */
-    function zontal_input_text($name, $value = '', $type, $field_class, $field_id, $label_width_class, $field_width_class = NULL, $place_holder = NULL) {
+    function zontal_input_text($name, $type, $field_class, $field_id, $label_width_class, $field_width_class, $place_holder, $value = '') {
         $buf = '
             <div class="form-group">
             <label class="' . $label_width_class . ' control-label">' . $place_holder . '</label>
@@ -291,6 +306,7 @@ class FormDesigner {
             </div>';
         return $buf;
     }
+
     /**
      * 
      * @param type $btn_name
@@ -311,5 +327,3 @@ class FormDesigner {
     }
 
 }
-
-?>

@@ -1,6 +1,16 @@
 <?php
 
+/**
+ * 
+ * @author Samrat Khan <skydotint@gmail.com>
+ * @name Standalone.php
+ * @version 0.1
+ * @license Public License
+ * @package StandAlone
+ * 
+ */
 class StandAlone {
+
     /**
      * 
      * @param type $marked_string
@@ -13,6 +23,7 @@ class StandAlone {
         $cleaned_string = str_replace('*', '', $no_zeros);
         return $cleaned_string;
     }
+
     /**
      * 
      * @param type $location
@@ -25,6 +36,13 @@ class StandAlone {
     }
     /**
      * 
+     */
+    public function redirect_to_login() {
+        header("Location: " . ROOT . DS . APPPATH . DS . 'panel' . DS . 'login');
+    }
+
+    /**
+     * 
      * @param type $message
      * @return string
      */
@@ -35,6 +53,7 @@ class StandAlone {
             return "";
         }
     }
+
     /**
      * 
      * @param string $break
@@ -44,10 +63,11 @@ class StandAlone {
         $break = "<br />";
         return $break;
     }
+
     /**
      * Willow Query Related Functions with Upper Camel Case Name Space
      */
-    
+
     /**
      * 
      * @global type $pdo Database global variable
@@ -86,6 +106,6 @@ class StandAlone {
     }
 
 }
+
 $standalone = new StandAlone();
-$sa =& $standalone;
-?>
+$sa = & $standalone;

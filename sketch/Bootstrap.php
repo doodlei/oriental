@@ -1,11 +1,13 @@
 <?php
 /**
  * Construction Whole Framework
+ * 
  * @author Samrat Khan <skydotint@gmail.com>
  * @name Bootstrap.php
  * @version 0.1
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  * @package Bootstrap
+ * 
  */
 class Bootstrap {
     function __construct() {

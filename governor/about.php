@@ -1,6 +1,14 @@
 <?php
 
-class About extends Governor {
+/**
+ * 
+ * @author Samrat Khan <skydotint@gmail.com>
+ * @name about.php
+ * @version 0.1
+ * @license Public None
+ * 
+ */
+class About extends \Governor {
 
     function __construct() {
         parent::__construct();

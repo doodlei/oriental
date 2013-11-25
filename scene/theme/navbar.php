@@ -22,7 +22,7 @@ if (isset($_SESSION['user']['id'])) {
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo basicInfo('url'); ?>/panel/profile">Profile</a></li>
                         <li class="divider"></li>
-                        <li><a href="<?php echo basicInfo('url'); ?>/panel/adduser">Add an user</a></li>
+                        <li><a href="<?php echo basicInfo('url'); ?>/panel/user_create_update">Add an user</a></li>
                         <li><a href="<?php echo basicInfo('url'); ?>/panel/viewusers">View Users</a></li>
                         <li><a href="<?php echo basicInfo('url'); ?>/panel/loginhistory">Login History</a></li>
                         <li class="divider"></li>

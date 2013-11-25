@@ -52,4 +52,3 @@ function autoload_class_multiple_directory($class_name) {
 }
 
 spl_autoload_register('autoload_class_multiple_directory');
-?>

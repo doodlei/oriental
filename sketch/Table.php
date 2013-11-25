@@ -29,14 +29,17 @@ class Table {
      * @param <String> $class class name for this table
      */
     public function __construct($zebra = null, $id = null, $class = null) {
-        if ($id != null)
+        if ($id != null) {
             $this->tableId = "id=\"$id\"";
-        if ($class != null)
+        }
+        if ($class != null) {
             $this->tableClass = "class=\"$class\"";
-        if ($zebra != null)
+        }
+        if ($zebra != null) {
             $this->zebra = true;
-        else
+        } else {
             $this->zebra = false;
+        }
     }
 
     /**
@@ -61,10 +64,11 @@ class Table {
      */
     public function setColumnsWidth($array) {
         foreach ($array as $elem) {
-            if ($elem != "")
+            if ($elem != "") {
                 $this->columnsWidth[] = "style=\"width:$elem\"";
-            else
+            } else {
                 $this->columnsWidth[] = "";
+            }
         }
     }
 
@@ -160,15 +164,17 @@ class Table {
         foreach ($data as $row) {
             if ($this->zebra) {
                 $count++;
-                if ($count % 2 == 1)
+                if ($count % 2 == 1) {
                     $this->zebraClass = "class=\"zebraOn\"";
-                else
+                } else {
                     $this->zebraClass = "class=\"zebraOff\"";
+                }
             }
 
             $table .= "<tr $this->zebraClass>";
-            foreach ($row as $col)
+            foreach ($row as $col) {
                 $table .= "<td>$col</td>";
+            }
             $table .= "</tr>";
         }
 
@@ -178,5 +184,3 @@ class Table {
     }
 
 }
-
-?>
