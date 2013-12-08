@@ -56,6 +56,8 @@ class User {
             } else {
                 print("Login Failed.");
                 $submitted_username = htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8');
+                $willow = new StandAlone();
+                $redirect_to_login = $willow->redirect_to_login();
             }
         }
     }

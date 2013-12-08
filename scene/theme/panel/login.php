@@ -20,8 +20,8 @@ if (isset($_POST['Submit'])) {
     echo '<p style="text-align: center; font: bold 14px Consolas;">Willow Login</p>';
     $form = new FormDesigner();
     echo '<form class="form-horizontal" method="post">';
-    echo $form->zontal_input_text('username', '', 'text', 'form-control', '', 'col-sm-2 control-label', 'col-sm-10', 'Username');
-    echo $form->zontal_input_text('password', '', 'password', 'form-control', '', 'col-sm-2 control-label', 'col-sm-10', 'Password');
+    echo $form->zontal_input_text('username', 'text', 'text', 'form-control', '', 'col-sm-2 control-label', 'col-sm-10', 'Username');
+    echo $form->zontal_input_text('password', 'password', 'password', 'form-control', '', 'col-sm-2 control-label', 'col-sm-10', 'Password');
     echo $form->zontal_submit_btn('Submit', 'Sign In', 'col-sm-offset-2 col-sm-10', 'btn btn-primary');
     echo '<div class="form-group"><span class="col-sm-offset-2 col-sm-10"><a class="btn btn-info" href="#">Ask for an account!</a></span></div>';
     echo '</form>';
