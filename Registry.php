@@ -34,3 +34,6 @@ if (!defined('DRAWER')) {
 if (!defined('SKETCH')) {
     define('SKETCH', 'sketch');
 }
+if (!defined('UPLOADSPATH')) {
+    define('UPLOADSPATH', ABSPATH . APPPATH . DS . UPLOADDIR . DS);
+}

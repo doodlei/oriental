@@ -17,6 +17,7 @@ defined('RESERVEDBY') ? null : define('RESERVEDBY', 'Step One Group Ltd.');
 define('ROOT', 'http://192.168.0.25:8081');
 /** Absolute path to the foo_root directory. */
 defined('APPPATH') ? null : define('APPPATH', 'fwf');
+defined('UPLOADDIR') ? null : define('UPLOADDIR', 'uploads');
 defined('DB_SERVER') ? null : define('DB_SERVER', 'localhost');
 defined('DB_USER') ? null : define('DB_USER', 'root');
 defined('DB_PASS') ? null : define('DB_PASS', '');
@@ -25,9 +26,13 @@ defined('DB_NAME') ? null : define('DB_NAME', 'gwms');
 
 
 try {
-    $pdo = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . '', DB_USER, DB_PASS);
+    $pdo = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . '', DB_USER, DB_PASS, array(PDO::MYSQL_ATTR_LOCAL_INFILE => 1));
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $pdo->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);    
     $bConnected = true;
 } catch (PDOException $e) {
     echo $this->ExceptionLog($e->getMessage());

@@ -46,12 +46,28 @@ class StandAlone {
      * @param type $message
      * @return string
      */
-    function output_message($message = "") {
+    function msg($message = "") {
         if (!empty($message)) {
-            return "<p class=\"message\">{$message}</p>";
+            return "<div class='alert alert-success'>$message</div>";
         } else {
             return "";
         }
+    }
+    /**
+     * 
+     * @param type $message
+     * @return string
+     */
+    function error_msg($message = "") {
+        if (!empty($message)) {
+            return "<div class='alert alert-danger'>$message</div>";
+        } else {
+            return "";
+        }
+    }
+
+    function rmfile($filepath, $filename) {
+        unlink($filepath . $filename);
     }
 
     /**

@@ -2,7 +2,7 @@
 
 /**
  * @author Michele Andreoli <michi.andreoli@gmail.com>
- * @name Table.class.php
+ * @name Table.php
  * @version 0.1
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  * @package TableGenerator

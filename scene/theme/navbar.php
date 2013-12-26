@@ -14,6 +14,7 @@ if (isset($_SESSION['user']['id'])) {
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo basicInfo('url'); ?>/index/index">Home</a></li>
                 <li><a href="<?php echo basicInfo('url'); ?>/about/index">About</a></li>
+                <li><a href="<?php echo basicInfo('url'); ?>/upload/csv">Upload CSV</a></li>
                 
             </ul>
             <ul class="nav navbar-nav navbar-right">

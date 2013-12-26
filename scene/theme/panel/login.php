@@ -1,5 +1,17 @@
+<style>
+    .loginbody {
+        background: url('../scene/drawer/img/worldmap.jpg') 50% 35%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .panel-default {
+        opacity: 0.9;
+        margin-top:30px;
+    }
+    .form-group.last { margin-bottom:0px; }
+</style>
 <?php
-
 getPage('header');
 getPage('navbar');
 if (isset($_POST['Submit'])) {
@@ -9,22 +21,34 @@ if (isset($_POST['Submit'])) {
     $user = new User();
     $found_user = $user->authenticate($username, $password);
 } else {
-    echo '<div class="logincontainer"
-            style=" background-color: #F7F7F7;
-                padding: 10px 20px 20px 20px;
-                margin: 0 auto;
-                width: 540px;
-                font: normal 13px Consolas;
-                -moz-border-radius: 5px 5px 0 0;
-            ">';
-    echo '<p style="text-align: center; font: bold 14px Consolas;">Willow Login</p>';
     $form = new FormDesigner();
-    echo '<form class="form-horizontal" method="post">';
-    echo $form->zontal_input_text('username', 'text', 'text', 'form-control', '', 'col-sm-2 control-label', 'col-sm-10', 'Username');
-    echo $form->zontal_input_text('password', 'password', 'password', 'form-control', '', 'col-sm-2 control-label', 'col-sm-10', 'Password');
-    echo $form->zontal_submit_btn('Submit', 'Sign In', 'col-sm-offset-2 col-sm-10', 'btn btn-primary');
-    echo '<div class="form-group"><span class="col-sm-offset-2 col-sm-10"><a class="btn btn-info" href="#">Ask for an account!</a></span></div>';
-    echo '</form>';
-    echo '</div>';
+    echo '<div class="loginbody"><div class="container"><div class="row"><div class="col-md-4 col-md-offset-7"><div class="panel panel-default"><div class="panel-heading">Willow Login</div><div class="panel-body"><form class="form-horizontal" method="post">';
+    echo $form->zontal_input_text('username', 'text', 'form-control', 'form-control', 'col-sm-3', 'col-sm-9 control-label', 'Username', 'Username');
+    echo $form->zontal_input_text('password', 'password', 'form-control', 'form-control', 'col-sm-3', 'col-sm-9 control-label', 'Password', '');
+    echo '
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"/>
+                    Remember me
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group last">
+        <div class="col-sm-9 control-label">';
+            echo $form->zontal_submit_btn('Submit', 'Sign In', 'col-sm-offset-2 col-sm-6', 'btn btn-success');
+    echo '
+        </div>
+        <div class="col-sm-3 control-label">';
+            echo '<button type="reset" class="btn btn-default" style="float: left;">Reset</button>';
+        echo '</div>
+    </div>
+</form>
+</div>
+<div class="panel-footer">Not Registred? <a href="#">Ask for an account!</a></div>
+</div></div>
+';
 }
 getPage('footer');
