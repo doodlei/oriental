@@ -4,12 +4,12 @@ if (isset($_SESSION['user']['id'])) {
     getPage('header');
     getPage('navbar');
 
-        $willow = new StandAlone();
+        $willow = new WillowQuery();
 
-        $sql = 'SELECT id, username FROM wms_users';
+        $sql = 'SELECT id, fullname, username FROM wms_users';
         $datas = $willow->Willow_QueryAll($sql);
 
-        $headers = array('ID', 'User Name');
+        $headers = array('ID', 'Full Name', 'User Name');
 
         $tbl = new Table();
         $tbl->setTableClass('table table-striped table-bordered');

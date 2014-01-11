@@ -301,7 +301,7 @@ class FormDesigner {
             <div class="form-group">
             <label class="' . $label_width_class . ' control-label">' . $place_holder . '</label>
             <div class="' . $field_width_class . '">
-                <input name="' . $name . '" value="' . $value . '" type="' . $type . '" class="' . $field_class . '" id="' . $field_id . '" placeholder="' . $place_holder . '">
+                <input autocomplete="off" name="' . $name . '" value="' . $value . '" type="' . $type . '" class="' . $field_class . '" id="' . $field_id . '" placeholder="' . $place_holder . '">
             </div>
             </div>';
         return $buf;
@@ -323,6 +323,27 @@ class FormDesigner {
                 </div>
             </div>
             ';
+        return $buf;
+    }
+    
+    /**
+     * 
+     * @param string $name Textarea Name. Use eg. name="example"
+     * @param string $value  Textarea value. Use eg. value="Example"
+     * @param string $id HTML id. Use eg. id="someid"
+     * @param string $class HTML class. Use eg. class="someclass"
+     * @param int $cols Textarea cols with default 40. Use eg. cols="40"
+     * @param int $rows Textarea rows with default 5. Use eg. rows="5"
+     * @return string Return textarea to the form
+     */
+    function zontal_textarea($name, $value = '', $id, $class, $cols = 40, $rows = 5) {
+        /**  wrap="virtual" is not part of any W3C HTML standard; at least 
+         * *  up to 4.01, but nearly any decent browser knows it, and if 
+         * *  it doesn't oh well.   It is too nice to not include here and does
+         * *  not seem to break anywhere. * */
+        $buf = '<textarea wrap="virtual" name="' . htmlspecialchars($name) . '" id="' .$id. '" class="' .$class. '" rows="' . $rows . '" cols="' . $cols . '">'
+                . htmlspecialchars($value)
+                . '</textarea>';
         return $buf;
     }
 

@@ -34,6 +34,7 @@ class StandAlone {
             exit;
         }
     }
+
     /**
      * 
      */
@@ -53,6 +54,7 @@ class StandAlone {
             return "";
         }
     }
+
     /**
      * 
      * @param type $message
@@ -83,44 +85,12 @@ class StandAlone {
     /**
      * Willow Query Related Functions with Upper Camel Case Name Space
      */
-
     /**
      * 
      * @global type $pdo Database global variable
      * @param type $query
      * @return type
      */
-    function Willow_QueryAll($query) {
-        global $pdo;
-        $sql = $query;
-        try {
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute();
-        } catch (PDOException $ex) {
-            die("Failed to run query: " . $ex->getMessage());
-        }
-
-        return $datas = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    /**
-     * 
-     * @global type $pdo Database global variable
-     * @param type $query
-     * @return type
-     */
-    function Willow_Query($query) {
-        global $pdo;
-        $query = $query;
-        try {
-            $stmt = $pdo->prepare($query);
-            $stmt->execute();
-        } catch (PDOException $ex) {
-            die("Failed to run query: " . $ex->getMessage());
-        }
-        return $row = $stmt->fetch();
-    }
-
 }
 
 $standalone = new StandAlone();

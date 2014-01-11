@@ -6,7 +6,7 @@ if (isset($_SESSION['user']['id'])) {
 
     echo '<div class="jumbotron">';
 
-        $willow = new StandAlone();
+        $willow = new WillowQuery();
         $query = "SELECT * FROM wms_users WHERE id = '" . $_SESSION['user']['id'] . "'";
         $row = $willow->Willow_Query($query);
 
